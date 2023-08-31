@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+}
+.foto{
+    width: 300px;
+    height: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.text_foto{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: auto;
+    min-height: 100vh;
+
+}
+.text{
+    margin-top: auto;
+    margin-bottom: auto;
+
+}

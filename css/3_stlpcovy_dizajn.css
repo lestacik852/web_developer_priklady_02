@@ -1,0 +1,106 @@
+* {
+    font-family: sans-serif;
+
+}
+
+.hlavny {
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    max-width: 1200px;
+    background-color: #999;
+    text-align: center;
+}
+
+.hlavicka {
+    text-align: left;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #ff8800;
+    height: 50px;
+    padding: 10px;
+}
+.logo_instagram{
+    color: #5d5d5d;
+}
+
+.riadok {
+    display: flex;
+    flex-direction: row;
+}
+
+.lavy {
+    background-color: #626262;
+    flex: 3;
+    padding: 10px;
+
+}
+
+.stredny {
+    background-color: lime;
+    flex: 1;
+    padding: 10px;
+
+}
+
+.pravy {
+    background-color: aqua;
+    flex: 1;
+    padding: 10px;
+
+}
+
+.patka {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: blue;
+    height: 50px;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.obrazok {
+    width: 20%;
+    float: left;
+    padding: 10px;
+    border-radius: 20px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    transition-duration: 0.7s;
+
+}
+a:hover {
+    color: lime;
+}
+a:active{
+    padding: 4px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+/*a:visited{
+    color: coral;
+}*/
+.logo{
+    font-size: 30px;
+    font-family: Arial;
+}
+div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+div li {
+    display: inline-block;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .riadok {
+        flex-direction: column;
+    }
+}
