@@ -27,9 +27,15 @@ header{
 }
 .home, .reviews, .contact, .organic_food{
     cursor: pointer;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    transition: 0.5s ease-in-out;
 }
 .home:hover, .reviews:hover, .contact:hover{
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */    opacity: 1;
 }
 .row{
     display: flex;
