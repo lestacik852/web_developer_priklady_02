@@ -25,6 +25,12 @@ header{
 .home{
     letter-spacing: 2px;
 }
+.home, .reviews, .contact, .organic_food{
+    cursor: pointer;
+}
+.home:hover, .reviews:hover, .contact:hover{
+    border-bottom: 2px solid white;
+}
 .row{
     display: flex;
     flex-direction: row;
