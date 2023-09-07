@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ako zväčšiť obrázok, keď prejdem myšou</title>
+    <style>
+        .hlavny {
+            overflow: hidden;
+            max-width: 500px;
+            max-height: 250px;
+        }
+        .hlavny img:hover {
+            transform: scale(1.2);
+            /*transform: rotate(0.5turn);*/
+            transition: transform 5s;
+        }
+    </style>
+</head>
+<body>
+<div class="hlavny">
+    <img src="pics/background.jpg" style="width: 500px;"/>
+</div>
+<!-- Tento obrazok uz nebude obsahovat efekt transform -->
+<img src="pics/background.jpg" style="width: 500px; margin-top:15px"/>
+</body>
+</html>
