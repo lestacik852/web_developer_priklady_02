@@ -25,10 +25,10 @@ tr:nth-child(odd){
     background-color: rgba(222, 220, 220, 0.67);
     font-weight: bold;
 }
-.top_tr_left{
+.top-tr-left{
     border-top-left-radius: 10px;
 }
-.top_tr_right{
+.top-tr-right{
     border-top-right-radius: 10px;
 }
 tr{

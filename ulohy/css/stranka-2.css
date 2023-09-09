@@ -14,7 +14,7 @@ header{
     padding: 0 60px;
     color: #fff;
 }
-.reviews_contact{
+.reviews-contact{
     display: flex;
     flex-direction: row;
     letter-spacing: 2px;
@@ -25,7 +25,7 @@ header{
 .home{
     letter-spacing: 2px;
 }
-.home, .reviews, .contact, .organic_food{
+.home, .reviews, .contact, .organic-food{
     cursor: pointer;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
     -webkit-background-clip: padding-box;
@@ -45,10 +45,10 @@ header{
     align-items: center;
     gap: 30px;
 }
-.right_images{
+.right-images{
     width: 600px;
 }
-.read_more{
+.read-more{
     margin: 20px auto;
     background-color: #fff;
     border: 2px solid red;
@@ -57,7 +57,7 @@ header{
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
-.read_more:hover{
+.read-more:hover{
     background-color: red;
     color: white;
 }
@@ -206,7 +206,7 @@ header{
     }
 }
 /*slide-gallery*/
-.heart_smile_apple{
+.heart-smile-apple{
     margin: 100px auto;
     display: flex;
     flex-direction: row;
@@ -223,12 +223,12 @@ header{
     flex-direction: row;
 
 }
-.heart_col, .smile_col, .apple_col {
+.heart-col, .smile-col, .apple-col {
      display: flex;
      flex-direction: column;
      margin: auto 20px;
  }
-.eggs_text{
+.eggs-text{
     display: flex;
     flex-direction: row;
     max-width: 1200px;
@@ -247,7 +247,7 @@ header{
     background-color: coral;
     max-height: 600px;
 }
-.read_cuisine{
+.read-cuisine{
     color: white;
     font-weight: bold;
     background-color: coral;
@@ -257,23 +257,23 @@ header{
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
-.read_cuisine:hover{
+.read-cuisine:hover{
     background-color: white;
     color: black;
 }
-.food_pics{
+.food-pics{
     margin: 100px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.food_col_1{
+.food-col-1{
     display: flex;
     flex-direction: column;
     margin: 20px 15px;
 }
-.food_col_2{
+.food-col-2{
     display: flex;
     flex-direction: column;
     margin: 20px 15px;
@@ -282,7 +282,7 @@ header{
     width: 585px;
     margin-top: 30px;
 }
-.reviews_pics{
+.reviews-pics{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -290,7 +290,7 @@ header{
     gap: 33px;
     max-width: 1200px;
 }
-.reviews_pics img{
+.reviews-pics img{
     max-width: 275px;
 }
 /* Slideshow container */
@@ -337,11 +337,11 @@ header{
     color: white;
 }
 /* Slides */
-.center_text{
+.center-text{
     font-size: 20px;
     text-align: center;
 }
-.row_soup{
+.row-soup{
     display: flex;
     flex-direction: row;
     margin: 10px 300px;
@@ -357,18 +357,18 @@ p{
     margin: auto;
     max-width: 1200px;
 }
-.row_res{
+.row-res{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 30px;
 }
-.row_res img{
+.row-res img{
     width: 350px;
     height: 400px;
     cursor: pointer;
 }
-.row_res a{
+.row-res a{
     text-decoration: none;
     color: black;
     display: flex;
@@ -378,10 +378,10 @@ p{
     transition: 0.5s ease-in-out;
     line-height: 12px;
 }
-.row_res span{
+.row-res span{
     transition: 0.3s ease-in-out;
 }
-.row_res span:hover {
+.row-res span:hover {
     color: red;
 }
 iframe{
@@ -393,7 +393,7 @@ iframe{
     display: flex;
     flex-direction: column;
 }
-.form_row{
+.form-row{
     display: flex;
     flex-direction: row;
 }
@@ -404,11 +404,11 @@ iframe{
 }
 
 .form textarea{
-    width: 512px;
+    width: 500px;
     border: 2px solid #cdcdcb;
     padding: 20px 85px;
 }
-.send_message{
+.send-message{
     margin-top: 15px;
     background-color: #fff;
     border: 2px solid red !important;
@@ -418,7 +418,7 @@ iframe{
     padding: 10px 20px;
     transition: 0.4s ease-in-out;
 }
-.send_message:hover{
+.send-message:hover{
     background-color: red;
     color: white;
 }
@@ -427,7 +427,7 @@ footer{
     padding: 40px;
     background-color: #f2f2f2;
 }
-.row_03{
+.row-03{
     margin: auto;
     line-height: 30px;
     max-width: 1200px;
@@ -437,10 +437,10 @@ footer{
     justify-content: space-between;
     background-color: #f2f2f2;
 }
-.row_03 img{
+.row-03 img{
     margin-right: -150px;
 }
-.send_email{
+.send-email{
     border: none;
     border-radius: 2px;
     font-size: 16px;

@@ -42,12 +42,12 @@ body{
     flex-direction: column;
     justify-content: center;
     }
-.main_content{
+.main-content{
     background-color: orange;
     height:325px;
     padding-top: 10px;
 }
-.extra_content{
+.extra-content{
     margin-top: 10px;
     background-color: #999999;
     height: 225px;
@@ -61,13 +61,13 @@ body{
     margin: 10px auto;
     justify-content: center;
 }
-.related_images{
+.related-images{
     flex: 3;
     background-color: lightgreen;
     height: 80px;
     padding-top: 5px;
 }
-.related_post {
+.related-post {
     flex: 1;
     background-color: pink;
     height: 80px;
@@ -88,7 +88,7 @@ body{
     .under{
         flex-direction: column;
     }
-    .hero, .sidebar, .main_content, .extra_content{
+    .hero, .sidebar, .main-content, .extra-content{
         height: 100px;
     }
 }

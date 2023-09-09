@@ -16,19 +16,19 @@ header{
     gap: 20px;
 }
 
-.header_left{
+.header-left{
     line-height: 1.1;
     display: flex;
     font-size: 86px;
     flex: 1.7;
 }
-.header_right{
+.header-right{
     margin-top: 227px;
     display: flex;
     flex: 1;
     justify-content: flex-end;
 }
-.our_team_clean_code{
+.our-team-clean-code{
     margin: auto 100px;
     display: flex;
     flex-direction: row;
@@ -36,16 +36,16 @@ header{
     color: #dfcefd;
     font-size: 30px;
 }
-.our_team{
+.our-team{
     margin: auto 10px;
 }
-.our_team_img{
+.our-team-img{
     max-width: 600px;
 }
-.clean_code{
+.clean-code{
     margin: auto 10px;
 }
-.clean_code_img{
+.clean-code-img{
     max-width: 600px;
 }
 
@@ -58,12 +58,10 @@ header{
     color: #625673;
 }
 .koncovka{
-    color: #7d3af9;
-    font-weight: bold;
-    margin: 80px 30px;
-    font-size: 100px;
+    margin: 50px;
+    max-width: 80px;
 }
-.row_01{
+.row-01{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -77,16 +75,16 @@ header{
     max-width: 50%;
     font-size: 85px;
 }
-.soft_right{
+.soft-right{
     max-width: 30%;
     color: #625673;
     display: flex;
     align-items: center;
 }
-.soft_01{
+.soft-01{
     color: #625673;
 }
-.our_team_clean_code{
+.our-team-clean-code{
     margin: auto 100px;
     display: flex;
     flex-direction: row;
@@ -100,18 +98,18 @@ img{
 img:hover{
     transform: scale(1.03);
 }
-.our_team{
+.our-team{
     margin: auto 10px;
     overflow: hidden;
 }
-.our_team_img{
+.our-team-img{
     max-width: 600px;
 }
-.clean_code{
+.clean-code{
     margin: auto 10px;
     overflow: hidden;
 }
-.clean_code_img{
+.clean-code-img{
     max-width: 600px;
 }
 
@@ -125,7 +123,7 @@ img:hover{
 }
 
 
-.various_professional{
+.various-professional{
     margin: 150px 100px;
     display: flex;
     flex-direction: row;
@@ -133,53 +131,53 @@ img:hover{
     color: #dfcefd;
     font-size: 30px;
 }
-.various_platforms{
+.various-platforms{
     margin: auto 10px;
     overflow: hidden;
 }
-.various_platforms_img{
+.various-platforms-img{
     max-width: 600px;
 }
-.professional_team{
+.professional-team{
     margin: auto 10px;
     overflow: hidden;
 }
-.professional_team_img{
+.professional-team-img{
     max-width: 600px;
 }
 
-.development_01{
+.development-01{
     margin-left: 185px;
     color: #625673;
 }
-.development_02{
+.development-02{
     margin-left: 185px;
     color: #625673;
 }
-.mobile_img{
+.mobile-img{
     max-height: 200px;
     margin-left: 100px;
     margin-bottom: 50px;
 }
-.mobile_img:hover{
+.mobile-img:hover{
     transform: none;
 }
-.planet_img{
+.planet-img{
     display: flex;
     align-items: center;
     height: 500px;
 }
-.planet_img:hover{
+.planet-img:hover{
     transform: none;
 }
 .planet{
     display: flex;
     align-items: center;
 }
-.great_experience{
+.great-experience{
     overflow: hidden;
 }
-.development_03 {
+.development-03 {
     margin-left: 490px;
     color: #625673;
 }
@@ -189,13 +187,11 @@ img:hover{
     justify-content: flex-start;
     align-items: center;
 }
-.konc_hist{
-    color: #837597;
-    font-weight: bold;
-    font-size: 50px;
-    margin-top: -10px;
+
+.konc-hist img{
+    width: 80px;
 }
- .hist_kruh{
+ .hist-kruh{
      display: flex;
      align-items: center;
      justify-content: space-around;
@@ -206,7 +202,7 @@ img:hover{
      width: 100px;
      height: 100px;
  }
- .our_history{
+ .our-history{
      font-size: 35px;
      color: #dfcefd;
      display: flex;
@@ -214,7 +210,7 @@ img:hover{
      max-width: 800px;
      text-align: left;
  }
- .last_22_23{
+ .last-22-23{
      display: flex;
      flex-direction: column;
      align-items: flex-end;
@@ -224,7 +220,7 @@ img:hover{
      margin-top: 150px;
      line-height: 150px;
  }
- .yr_22_23{
+ .yr-22-23{
      font-size: 35px;
      color: #625673;
      line-height: 20px;
@@ -254,7 +250,7 @@ img:hover{
     transform: none;
     opacity: 1;
 }
-.our_clients{
+.our-clients{
     text-align: center;
     font-size: 70px;
     color: #dfcefd;
@@ -280,13 +276,13 @@ img:hover{
     border-radius: 50%;
     max-width: 70px;
 }
-.jess_lorem{
+.jess-lorem{
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 800px;
 }
-.development_04{
+.development-04{
     margin-top: 30px;
     color: #625673;
     display: flex;
@@ -294,7 +290,7 @@ img:hover{
     gap: 20px;
     font-size: 20px;
 }
-.mail_other{
+.mail-other{
     max-width: 1550px;
     margin: 20px auto;
     border: 2px solid #2a2034;
@@ -310,7 +306,7 @@ img:hover{
     border-bottom: solid 2px #2a2034;
     max-width: 1400px;
 }
-.mail_row{
+.mail-row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -325,8 +321,9 @@ img:hover{
     line-height: 50px;
     flex:1;
     align-items: flex-start;
+    margin-left: 700px;
 }
-.social_02{
+.social-02{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -337,8 +334,7 @@ img:hover{
 .kon{
     display: flex;
     flex: 2;
-    font-size: 80px;
-    font-weight: bold;
+    max-width: 80px;
 }
 .started{
     color: #dfcefd;
@@ -354,7 +350,7 @@ img:hover{
     background-color: #dfcefd;
     color: #150d1d;
 }
-.c_2030{
+.c-2030{
     text-align: center;
     font-size: 250px;
     margin-top: -125px;
@@ -379,15 +375,15 @@ img:hover{
 .ko{
     display: flex;
     flex: 2;
-    font-size: 40px;
-    font-weight: bold;
+    max-width: 40px;
 }
-.foot_oth{
+.foot-oth{
     display: flex;
     flex-direction: row;
     gap: 50px;
     align-items: center;
-    margin-right: 30px;
+    margin-left: 1100px;
+
 }
 .contact{
     font-size: 24px;

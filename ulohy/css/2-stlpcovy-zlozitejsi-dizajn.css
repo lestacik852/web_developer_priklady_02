@@ -33,42 +33,42 @@ body{
     height: 530px;
     flex: 2;
 }
-.lavy_prvy{
+.lavy-prvy{
     padding-top: 10px;
     background-color: lightpink;
     height: 35%;
 }
-.lavy_druhy{
+.lavy-druhy{
     padding-top: 10px;
     margin: 10px auto;
     background-color: lightgreen;
     height: 65%;
 }
-.pravy_prvy{
+.pravy-prvy{
     padding-top: 10px;
     background-color: #fca240;
     height: 75%;
 }
-.pravy_druhy{
+.pravy-druhy{
     padding-top: 10px;
     margin: 10px auto;
     background-color: #626262;
     height: 25%;
 }
-.riadok_dva{
+.riadok-dva{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
     height: 90px;
     gap: 10px;
 }
-.lavy_spod{
+.lavy-spod{
     padding-top: 10px;
     margin-top: 10px;
     background-color: springgreen;
     flex: 2;
 }
-.pravy_spod{
+.pravy-spod{
     padding-top: 10px;
     margin-top: 10px;
     background-color: lightpink;
