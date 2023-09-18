@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Objednávka</title>
+    <script src="https://kit.fontawesome.com/9001c02547.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/objednavka.css">
+</head>
+<body>
+<main>
+    <form action="#">
+        <section class="left">
+            <h1>Objednávka</h1>
+            <section class="transport">
+                <h2>Spôsob dopravy*</h2>
+                <input type="radio" name="transport-type" id="in-place" data-price="0">
+                <p class="row-border">
+                    <label for="in-place">Osobne</label><span class="price">0€</span>
+                </p>
+                <input type="radio" name="transport-type" id="post" data-price="4">
+                <p class="row-border">
+                    <label for="post">Slovenská pošta</label><span class="price">4€</span>
+                </p>
+                <input type="radio" name="transport-type" id="kurier" data-price="5.5">
+                <p class="row-border">
+                    <label for="kurier">Kurier</label><span class="price">5,5€</span>
+                </p>
+            </section>
+            <section class="payment">
+                <h2>Platba*</h2>
+                <input type="radio" name="cash" id="cash" data-price="2">
+                <p class="row-border">
+                    <label for="cash">Hotovosť</label><span class="price-type">2€</span>
+                </p>
+                <input type="radio" name="cash" id="cart" value="Karta" data-price="2.5">
+                <p class="row-border">
+                    <label for="cart">Karta</label><span class="price-type">2,5€</span>
+                </p>
+            </section>
+            <section class="info">
+                <h2>Adresa</h2>
+                <h3>Fakturačná adresa</h3>
+                <p>
+                    <button class="person-button active-sub">Osoba</button>
+                    <button class="company-button">Firma</button>
+                </p>
+                <p>
+                    <input type="email" placeholder="&#xf0e0; Kontaktný e-mail:" style="font-family: sans-serif,FontAwesome">
+                </p>
+                <p id="company-inputs" style="display: none;">
+                    <input type="text" placeholder="IČO:">
+                    <input type="text" placeholder="DIČ:">
+                    <input type="text" placeholder="Firma:">
+                </p>
+                <p id="person-inputs">
+                    <input type="text" placeholder="Meno:">
+                    <input type="text" placeholder="Priezvisko:">
+                </p>
+                <p class="adress">
+                    <input type="text" placeholder="Ulica:">
+                    <input type="number" placeholder="Číslo popisné:">
+                    <input type="number" placeholder="Orientačné číslo:">
+                </p>
+                <p>
+                    <input type="number" placeholder="PSČ:">
+                    <input type="text" placeholder="Mesto:">
+                </p>
+
+                <p>
+                    <input type="tel" placeholder="&#xf095; Telefon:" style="font-family: sans-serif,FontAwesome">
+                </p>
+                <p class="dif-adress">
+                    <input type="checkbox" name="different-adress" id="different-adress">
+                    <label for="different-adress">Odlišná adresa pre doručenie</label></p>
+                <div class="different-adress-inputs">
+                    <p class="adress">
+                        <input type="text" placeholder="Ulica:">
+                        <input type="number" placeholder="Číslo popisné:">
+                        <input type="number" placeholder="Orientačné číslo:">
+                    </p>
+                    <p>
+                        <input type="number" placeholder="PSČ:">
+                        <input type="text" placeholder="Mesto:">
+                    </p>
+                </div>
+
+
+            </section>
+        </section>
+        <section class="right">
+            <div class="help">
+                <h2>Neviete si poradiť?</h2>
+                <p>Neváhajte nás kontaktovať:</p>
+                <p>Telefon: <a href="tel:0900000000">0900 000 000</a></p>
+                <p>Email : <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+            </div>
+            <h2>Súhrn objednávky</h2>
+            <section class="summary">
+                <div class="row">
+                    <img src="pics/background.jpg" alt="">
+                    <div class="column">
+                        <p class="name-prod">Bikiny čierne</p>
+                        <p>Barva: biela</p>
+                        <p>1ks <span class="item-price">35€</span></p>
+                    </div>
+                </div>
+                <div class="row-3">Zpôsob dopravy:</div>
+                <div class="row-3">Platba:</div>
+                <div class="summ">
+                    <div class="row-2">
+                        <input type="text" placeholder="Darčekový poukaz:">
+                        <input type="submit" value="Použiť">
+                    </div>
+                    <div class="column-2">
+                        <p>Zaokrúhlenie:</p>
+                        <p>Celkom:</p>
+                    </div>
+                    <div class="final-sum">Celkom vč. DPH:</div>
+                    <button class="send-order">Odoslať objednávku</button>
+                </div>
+
+            </section>
+        </section>
+    </form>
+</main>
+<script>
+    document.querySelectorAll("[name='different-adress']").forEach(radio=> {
+        radio.checked = false;
+        radio.removeAttribute('checked')
+    });
+    // Function to toggle the visibility of company input fields
+    function toggleCompanyInputs(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        const companyInputs = document.getElementById('company-inputs');
+        const personInputs = document.getElementById('person-inputs');
+        const companyButtons = document.getElementsByClassName('company-button');
+        const personButtons = document.getElementsByClassName('person-button');
+
+        if (companyInputs.style.display === 'none' || companyInputs.style.display === '') {
+            companyInputs.style.display = 'flex';
+            companyInputs.style.flexDirection = "row";
+            companyInputs.style.gap = "5px";
+
+            // Loop through company buttons and add the active class
+            for (const button of companyButtons) {
+                button.classList.add('active-sub');
+            }
+
+            personInputs.style.display = 'none'; // Hide person inputs
+
+            // Loop through person buttons and remove the active class
+            for (const button of personButtons) {
+                button.classList.remove('active-sub');
+            }
+        } else {
+            companyInputs.style.display = 'none';
+
+            // Loop through company buttons and remove the active class
+            for (const button of companyButtons) {
+                button.classList.remove('active-sub');
+            }
+
+            personInputs.style.display = 'block'; // Show person inputs
+
+            // Loop through person buttons and add the active class
+            for (const button of personButtons) {
+                button.classList.add('active-sub');
+            }
+        }
+    }
+
+    // Attach click event listeners to all elements with the "company-button" class
+    const companyButtons = document.getElementsByClassName('company-button');
+    for (const button of companyButtons) {
+        button.addEventListener('click', toggleCompanyInputs);
+    }
+
+    // Attach click event listeners to all elements with the "person-button" class
+    const personButtons = document.getElementsByClassName('person-button');
+    for (const button of personButtons) {
+        button.addEventListener('click', toggleCompanyInputs);
+    }
+    // Function to toggle the display of the different address inputs
+    function toggleDifferentAddressInputs() {
+        const differentAddressInputs = document.querySelector('.different-adress-inputs');
+
+        if (differentAddressInputs) {
+            if (differentAddressInputs.style.display === 'none' || differentAddressInputs.style.display === '') {
+                differentAddressInputs.style.display = 'block';
+            } else {
+                differentAddressInputs.style.display = 'none';
+            }
+        }
+    }
+
+    // Attach a click event listener to the radio button with id "different-adress"
+    const differentAddressRadio = document.getElementById('different-adress');
+    if (differentAddressRadio) {
+        differentAddressRadio.addEventListener('change', toggleDifferentAddressInputs);
+    }
+
+
+</script>
+
+<script>
+    // Function to calculate the total sum and toggle the payment section
+    function calculateTotal() {
+        // Get the selected transport and payment values
+        const selectedTransport = document.querySelector('input[name="transport-type"]:checked');
+        const selectedPayment = document.querySelector('input[name="cash"]:checked');
+        const paymentSection = document.querySelector('.payment'); // Select the payment section
+
+        // Initialize the total price
+        let totalPrice = 0;
+
+        // Calculate the total based on the selected transport option
+        if (selectedTransport) {
+            const transportPrice = parseFloat(selectedTransport.getAttribute('data-price'));
+            if (!isNaN(transportPrice)) {
+                totalPrice += transportPrice;
+            }
+
+            // Check if the selected transport is "in-place"
+            if (selectedTransport.id === 'in-place') {
+                // Hide the payment section
+                paymentSection.style.display = 'none';
+            } else {
+                // Show the payment section for other transport options
+                paymentSection.style.display = 'block';
+            }
+        }
+
+        // Calculate the total based on the selected payment option
+        if (selectedPayment) {
+            const paymentPrice = parseFloat(selectedPayment.getAttribute('data-price'));
+            if (!isNaN(paymentPrice)) {
+                totalPrice += paymentPrice;
+            }
+        }
+
+        // Get the price elements for product items
+        const itemPriceElements = document.querySelectorAll('.item-price');
+
+        // Calculate the total based on the selected product items
+        itemPriceElements.forEach(priceElement => {
+            const itemPrice = parseFloat(priceElement.textContent.trim().replace('€', '').replace(',', '.'));
+            if (!isNaN(itemPrice)) {
+                totalPrice += itemPrice;
+            }
+        });
+
+        // Display the total in the "final-sum" class
+        const finalSumElement = document.querySelector('.final-sum');
+        if (finalSumElement) {
+            finalSumElement.textContent = `Celkom vč. DPH: ${totalPrice.toFixed(2)}€`;
+        }
+    }
+
+    // Attach an event listener to all radio inputs to recalculate total when options change
+    const inputElements = document.querySelectorAll('input[type="radio"]');
+    inputElements.forEach(inputElement => {
+        inputElement.addEventListener('change', calculateTotal);
+    });
+
+    // Initial calculation on page load
+    calculateTotal();
+</script>
+</body>
+</html>
