@@ -8,34 +8,41 @@
 </head>
 <body>
 <main>
-    <form action="#">
+    <form>
         <section class="left">
             <h1>Objednávka</h1>
             <section class="transport">
                 <h2>Spôsob dopravy*</h2>
-                <input type="radio" name="transport-type" id="in-place" data-price="0">
+                <input type="radio" name="transport-type" id="in-place" data-price="0" required>
                 <p class="row-border">
                     <label for="in-place">Osobne</label><span class="price">0€</span>
                 </p>
-                <input type="radio" name="transport-type" id="post" data-price="4">
+                <input type="radio" name="transport-type" id="post" data-price="4" required>
                 <p class="row-border">
                     <label for="post">Slovenská pošta</label><span class="price">4€</span>
                 </p>
-                <input type="radio" name="transport-type" id="kurier" data-price="5.5">
+                <input type="radio" name="transport-type" id="kurier" data-price="5.5" required>
                 <p class="row-border">
                     <label for="kurier">Kurier</label><span class="price">5,5€</span>
                 </p>
             </section>
             <section class="payment">
                 <h2>Platba*</h2>
-                <input type="radio" name="cash" id="cash" data-price="2">
+                <div class="in-place-cash-visible">
+                <input type="radio" name="cash" id="in-place-cash" data-price="0" required>
                 <p class="row-border">
-                    <label for="cash">Hotovosť</label><span class="price-type">2€</span>
-                </p>
-                <input type="radio" name="cash" id="cart" value="Karta" data-price="2.5">
+                    <label for="in-place-cash">Osobne</label><span class="price-type">0€</span>
+                </p></div>
+                <div class="cash-type">
+                <input type="radio" name="cash" id="cash" data-price="2" required>
+                <p class="row-border">
+                    <label for="cash">Dobierka</label><span class="price-type">2€</span>
+                </p></div>
+                <div class="cart-type">
+                <input type="radio" name="cash" id="cart" value="Karta" data-price="2.5" required>
                 <p class="row-border">
                     <label for="cart">Karta</label><span class="price-type">2,5€</span>
-                </p>
+                </p></div>
             </section>
             <section class="info">
                 <h2>Adresa</h2>
@@ -57,13 +64,13 @@
                     <input type="text" placeholder="Priezvisko:">
                 </p>
                 <p class="adress">
-                    <input type="text" placeholder="Ulica:">
-                    <input type="number" placeholder="Číslo popisné:">
+                    <input type="text" placeholder="Ulica:" required>
+                    <input type="number" placeholder="Číslo popisné:" required>
                     <input type="number" placeholder="Orientačné číslo:">
                 </p>
                 <p>
-                    <input type="number" placeholder="PSČ:">
-                    <input type="text" placeholder="Mesto:">
+                    <input type="number" placeholder="PSČ:" required>
+                    <input type="text" placeholder="Mesto:" required>
                 </p>
 
                 <p>
@@ -208,7 +215,11 @@
         // Get the selected transport and payment values
         const selectedTransport = document.querySelector('input[name="transport-type"]:checked');
         const selectedPayment = document.querySelector('input[name="cash"]:checked');
-        const paymentSection = document.querySelector('.payment'); // Select the payment section
+        const paymentSection = document.querySelector('.cart-type'); // Select the payment section
+        const inPlaceCashSection = document.querySelector('.in-place-cash-visible'); // Select the in-place-cash section
+        const cashSection = document.querySelector('.cash-type'); // Select the payment section
+
+
 
         // Initialize the total price
         let totalPrice = 0;
@@ -224,9 +235,15 @@
             if (selectedTransport.id === 'in-place') {
                 // Hide the payment section
                 paymentSection.style.display = 'none';
+                cashSection.style.display = "none";
+                // Show the in-place-cash section
+                inPlaceCashSection.style.display = 'block';
             } else {
                 // Show the payment section for other transport options
                 paymentSection.style.display = 'block';
+                // Hide the in-place-cash section for other transport options
+                inPlaceCashSection.style.display = 'none';
+                cashSection.style.display = "block";
             }
         }
 
