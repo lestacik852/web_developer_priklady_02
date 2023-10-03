@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Príklady Javascript</title>
+    <style>
+        h2{
+            color: #00ff00;
+        }
+        body{
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #999;
+            color: #fff;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: #00ff00;
+            color: #000;
+            border-radius: 15px;
+        }
+        .on{
+            background-color: limegreen;
+        }
+        .off{
+            background-color: red;
+        }
+        .off:hover{
+            background-color: #ff6363;
+        }
+    </style>
+</head>
+<body style="text-align: center">
+<h2>Môj prvý javascript</h2>
+<button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+    Klikni ma aby som napísal Dátum a čas.</button>
+<p id="demo"></p>
+
+<button type="button"
+        onclick="document.getElementById('demo-2').innerHTML = 'Ahoj'"><!--' - najdeme s altGR + P-->
+    Klikni ma aby som napísal Ahoj.</button>
+
+<p id="demo-2"></p>
+<button type="button"
+        onclick="myFunction()"><!--' - najdeme s altGR + P-->
+    Klikni ma aby som napísal Ahojky.</button>
+<p id="demo-3"></p>
+
+<h2>Čo môže javascript spraviť?</h2>
+<p id="demo-4">JavaScript môže meniť HTML obsah.</p>
+<button type="button" onclick="document.getElementById('demo-4').innerHTML = 'Ahoj JavaScript!'">Klikni!</button>
+
+<h2>Čo môže javascript spraviť?</h2>
+<p>JavaScript môže meniť HTML hodnoty.</p>
+<p>V tomto JavaScript mení hodnotu pre src(source) obrázka.</p>
+<button class="on" onclick="document.getElementById('myImage').src='../pics/pic_bulbon.gif'">Zapni svetlo</button>
+<img id="myImage" src="../pics/pic_bulboff.gif" style="width:100px">
+<button class="off" onclick="document.getElementById('myImage').src='../pics/pic_bulboff.gif'">Vypni svetlo</button>
+
+<h2>Čo môže javascript spraviť?</h2>
+<p id="demo-5">JavaScript môže meniť štýl HTML elementu.</p>
+<button type="button" onclick="document.getElementById('demo-5').style.fontSize='35px'">Klikni ma!</button>
+
+<h2>Čo môže javascript spraviť?</h2>
+<p id="demo-6">JavaScript môže schovať/ukázať HTML elementy.</p>
+<button class="off" type="button" onclick="document.getElementById('demo-6').style.display='none'">Schovaj ma!</button>
+<button class="on" type="button" onclick="document.getElementById('demo-6').style.display='block'">Ukáž ma!</button>
+<button class="off" id="button-toogle" type="button" onclick="myFunctionToggle()">Schovať text!</button>
+
+<h2>Čo môže javascript spraviť?</h2>
+<p>JavaScript môže zobraziť schované HTML elementy.</p>
+<p id="demo-7" style="display:none">Ahoj JavaScript!</p>
+<button type="button" onclick="document.getElementById('demo-7').style.display='block'">Klikni ma!</button>
+
+<h2>JavaScript v tele</h2>
+<p id="demo-8">Ahojte všetci</p>
+
+
+<p id="demo-9"></p>
+
+<script>
+    document.getElementById("demo-9").innerHTML = 5 + 10;
+    document.write(5 + 6);
+    document.write("<br><b>Ahojte</b>");
+    // window.alert(5+80); pop-up okno
+    // window.alert("Ahojte"); pop-up okno
+
+    const consoleWrite = "Konzola";
+    console.log(consoleWrite, 5+10, "Ahojte");
+</script>
+
+<br>
+<button type="button" onclick="document.write(5 + 650)">Skús to</button>
+<br>
+<button onclick="window.print()">Vytlač celú stránku</button>
+<script src="script.js"></script>
+</body>
+</html>
