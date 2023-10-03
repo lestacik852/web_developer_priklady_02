@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Príklady Javascript</title>
+    <script src="https://kit.fontawesome.com/9001c02547.js" crossorigin="anonymous"></script>
+
     <style>
         h2{
             color: #00ff00;
@@ -35,6 +37,14 @@
         }
         .off:hover{
             background-color: #ff6363;
+        }
+        .arrow{
+            text-align: right;
+            margin-right: 30px;
+        }
+        .fa-arrow-up-long:hover{
+            transition: 0.4s ease-in-out;
+            color: lime;
         }
     </style>
 </head>
@@ -83,7 +93,6 @@
 <h2>JavaScript v tele</h2>
 <p id="demo-8">Ahojte všetci</p>
 
-
 <p id="demo-9"></p>
 
 <script>
@@ -97,10 +106,9 @@
     console.log(consoleWrite, 5+10, "Ahojte");
 </script>
 
-<br>
-<button type="button" onclick="document.write(5 + 650)">Skús to</button>
-<br>
+<p><button type="button" onclick="document.write(5 + 650)">Skús to</button></p>
 <button onclick="window.print()">Vytlač celú stránku</button>
+<p class="arrow"><a href="#"><i class="fa-solid fa-arrow-up-long"></i></a></p>
 <script src="script.js"></script>
 </body>
 </html>
