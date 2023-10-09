@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulačka</title>
+    <link rel="stylesheet" href="css/kalkulacka-adv.css">
+    <script src="https://kit.fontawesome.com/9001c02547.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<a href="#display">
+<main>
+
+       <div><input type="text" id="display" placeholder="0"></div>
+    <div>
+        <input type="button" onclick="display.value = ''" value="C" class="operator">
+        <input type="button" onclick="display.value = display.value.toString().slice(0,-1)" value="&#xf55a"  style="font-family: sans-serif,FontAwesome" class="operator">
+        <input type="button" onclick="display.value += '%' " value="%" class="operator">
+        <input type="button" onclick="display.value += '/'" value="&#xf529" style="font-family: sans-serif,FontAwesome" class="operator">
+
+    </div>
+    <div>
+        <input type="button" onclick="display.value += '7'" value="7">
+        <input type="button" onclick="display.value += '8'" value="8">
+        <input type="button" onclick="display.value += '9'" value="9">
+        <input type="button" onclick="display.value += '*'" value="x" class="operator">
+    </div>
+    <div>
+        <input type="button" onclick="display.value += '4'" value="4">
+        <input type="button" onclick="display.value += '5'" value="5">
+        <input type="button" onclick="display.value += '6'" value="6">
+        <input type="button" onclick="display.value += '-'" value="-" class="operator">
+    </div>
+    <div>
+        <input type="button" onclick="display.value += '1'" value="1">
+        <input type="button" onclick="display.value += '2'" value="2">
+        <input type="button" onclick="display.value += '3'" value="3">
+        <input type="button" onclick="display.value += '+'" value="+" class="operator">
+    </div>
+    <div>
+        <input type="button" onclick="display.value += ',' " value="," class="operator">
+        <input type="button" onclick="display.value += '0'" value="0">
+        <input type="button" onclick="result()" value="=" class="result operator">
+    </div>
+</main>
+</a>
+<script src="js/kalkulacka-adv.js"></script>
+</body>
+</html>
