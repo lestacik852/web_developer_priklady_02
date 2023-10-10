@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/priklad.css">
 </head>
 <body>
-<h2>Môj prvý javascript</h2>
+<h1>Môj prvý javascript</h1>
 <button type="button" onclick="formatDate()">
     Klikni ma aby som napísal Dátum a čas.</button>
 <p id="demo"></p>
@@ -22,7 +22,7 @@
     Klikni ma aby som napísal Ahojky.</button>
 <p id="demo-3"></p>
 
-<h2>Čo môže javascript spraviť?</h2>
+<h1>Čo môže javascript spraviť?</h1>
 <p id="demo-4">JavaScript môže meniť HTML obsah.</p>
 <button type="button" onclick="document.getElementById('demo-4').innerHTML = 'Ahoj JavaScript!'">Klikni!</button>
 
@@ -48,7 +48,7 @@
 <p id="demo-7" style="display:none">Ahoj JavaScript!</p>
 <button type="button" onclick="document.getElementById('demo-7').style.display='block'">Klikni ma!</button>
 
-<h2>JavaScript v tele</h2>
+<h1>JavaScript v tele</h1>
 <p id="demo-8">Ahojte všetci</p>
 
 <p id="demo-9"></p>
@@ -71,25 +71,58 @@
 <button onclick="window.print()">Vytlač celú stránku</button>
 <p class="arrow"><a href="#"><i class="fa-solid fa-arrow-up-long"></i></a></p>
 
-<h2>JavaScript Statements</h2>
-<p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
-<p id="demo10"></p>
-<p id="demo11"></p>
+<h1>JavaScript Statements</h1>
+
+<p><b>JavaScript program</b> je zoznam <b>statements</b> ktorý má byť vykonaný počítačom.</p>
+
+<p id="demo-10"></p>
+<p id="demo-11"></p>
+
 <script>
-    var x, y, z;  // Statement 1
+    let x, y, z;  // Statement 1
     x = 5;        // Statement 2
     y = 6;        // Statement 3
     z = x + y;    // Statement 4
 
-    document.getElementById("demo10").innerHTML = "The value of z is " + z + ".";
+    let demo10 = document.getElementById("demo-10");
+    demo10.innerHTML = "Hodnota z je " + z + "."
 
-    var meno, priezvisko;
-    meno = "Janko";
-    priezvisko = "Hruštička";
-    pocetRokov = 28;
-    menoPriezvisko = meno + " " + priezvisko + " a má " + pocetRokov + " rokov.";
-    document.getElementById("demo11").innerHTML = menoPriezvisko;
+    /*  var meno, priezvisko, osobneUdaje;*/
+    const meno = "Martin"; // Vytvorenie a naplnenie premennej meno
+    const priezvisko = "Hríbik"; // Vytvorenie a naplnenie premennej priezvisko
+    const pocetRokov = 30; // Vytvorenie a naplnenie premennej pocetRokov, cislo nie je potrebne vlozit do uvodzoviek
+    const zamestnavatel = "Firma XYZ s.r.o.";
+    // Vytvorenie premenne osobneUdaje, ktora spaja obsah jednotlivych premennych s vlastnym textom, na to prave pouzijeme +
+    const osobneUdaje = meno + " " + priezvisko + " je zamestnancom " + zamestnavatel +
+        " a má " + pocetRokov + " rokov.";
+
+    let demo11 = document.getElementById("demo-11");
+    demo11.innerHTML = osobneUdaje;
+
+    a = 15;
+    b = 16;
+    c = a + b;
+    console.log(c)
+
+
 </script>
+<h1>Premenné</h1>
+<script>
+    // Deklarácia a inicializácia premenných
+    const menoPremenne = "John";
+    let vekPremenne = 30;
+
+    // Použitie premenných
+    console.log("Meno: " + menoPremenne);
+    console.log("Vek: " + vekPremenne);
+
+    // Zmena hodnoty premennej
+    vekPremenne = 31;
+
+    // Nová hodnota premennej vek
+    console.log("Nový vek: " + vekPremenne);
+</script>
+
 <script src="js/script.js"></script>
 </body>
 </html>

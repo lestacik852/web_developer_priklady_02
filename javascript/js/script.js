@@ -19,11 +19,11 @@ function myFunctionToggle() {
 
 function formatDate() {
     const date = new Date();
-    const day = date.getDate().toString();
-    const month = (date.getMonth() + 1).toString();
-    const year = date.getFullYear().toString();
-    const hour = date.getHours().toString();
-    const minute = date.getMinutes().toString();
+    const day = date.getDate();
+    const month = (date.getMonth() + 1);
+    const year = date.getFullYear();
+    const hour = date.getHours();
+    const minute = date.getMinutes();
     const dateDisplay = document.getElementById("demo");
 
     dateDisplay.innerHTML = hour + ":" + minute + "<br>" + day + "." + month + "." + year;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Vyhodnoť slovnú známku</title>
+</head>
+<body>
+<form>
+    <label for="slovna-znamka">Slovná známka</label>
+    <input type="text" id="slovna-znamka" /><br>
+    <input type="button" onclick="vyhodnotSlovnuZnamku()" value="Vyhodnoť test" /><br>
+    <p id="odpoved"></p>
+</form>
+
+<script>
+
+    function odstranDiakritiku(text) {
+        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function vyhodnotSlovnuZnamku() {
+        let slovnaZnamkaStudenta = document.getElementById("slovna-znamka").value;
+        let slovnaZnamkaStudentaMalymiPismenami = slovnaZnamkaStudenta.toLowerCase();
+        let slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky = odstranDiakritiku(slovnaZnamkaStudentaMalymiPismenami);
+        console.log(slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky);
+
+        let znamka;
+        if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "vyborny")
+            znamka = 1;
+        else if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "chvalitebny")
+            znamka = 2;
+        else if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "dobry")
+            znamka = 3;
+        else if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "dostatocny")
+            znamka = 4;
+        else
+            znamka = 5;
+
+        document.getElementById("odpoved").innerHTML = "Dostal si známku " + znamka;
+    }
+</script>
+</body>
+</html>
