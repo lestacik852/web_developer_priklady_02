@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Polia</title>
+</head>
+<body>
+<script>
+    let mojePole = [1, 2, 3, 4, 5,]; //Pole s názvom mojePole, ktoré obsahuje 5 čísiel od 1 do 5
+    document.writeln(mojePole);
+    document.writeln("<br>Prvá hodnota poľa");
+    document.writeln(mojePole[0]); //Vypísanie obsah prveho prvku pola
+
+    document.writeln("<br>Posledná hodnota poľa");
+    document.writeln(mojePole[4]); // Vypísanie obsah posledného prvku pola keby dám (mojePole[mojePole.length-1]) tak vypise za kazdym posledne
+
+    mojePole.push(5); //Pridá hodnotu 5 na koniec pola
+
+    mojePole[2] = 999; // Zmení hodnotu tretieho prvku na 999
+
+    document.writeln("<br>Všetky hodnoty poľa");
+    for (let index = 0; index < mojePole.length; index++) {
+        document.writeln(mojePole[index]);
+    }
+
+    document.writeln("<br>Všetky hodnoty pola (po novom cez lambda výrazy)");
+    mojePole.forEach((prvok) => {
+        console.log(prvok);
+    });
+
+    //Sčítanie hodnôt pola
+    let sum = 0;
+    for (let index = 0; index < mojePole.length; index++) {
+        sum = sum + mojePole[index];
+    }
+        document.writeln("<br>Výsledok sčítanie je: " + sum);
+
+    //Pole môže obsahovať aj text
+    const auta = ["Honda", "BMW", "Toyota", "Škoda"];
+    document.writeln("<br>Prvé auto v zozname: " + auta[0]);
+    document.writeln("<br>Posledné auto v zozname:" + auta[auta.length -1]);
+
+    //Všetky hodnoty poľa
+    document.writeln("<br>Všetky hodnoty poľa");
+    for (let index = 0; index < auta.length; index++){
+        document.writeln(auta[index]);
+    }
+</script>
+</body>
+</html>

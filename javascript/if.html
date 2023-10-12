@@ -13,6 +13,7 @@
             border: none;
             border-bottom: 1px solid #999;
             border-radius: 5px;
+            transition: 0.4s ease-in-out;
         }
         .inputs:focus{
             outline: none;
@@ -36,6 +37,7 @@
             background-color: #fff;
             border: none;
             border-radius: 5px;
+            transition: 0.4s ease-in-out;
 
         }
         input[type=button]:hover{
@@ -71,8 +73,8 @@
 <!--</script>-->
 
 <form>
-    <div><input type="text" placeholder="Meno Študenta" id="student-name" required class="inputs">
-    <input type="number" placeholder="Počet bodov" id="input-number" required class="inputs"></div>
+    <div><input type="text" placeholder="Meno Študenta..." id="student-name" required class="inputs">
+    <input type="number" placeholder="Počet bodov..." id="input-number" required class="inputs"></div>
     <input type="button" onclick="result()" value="Vyhodnotiť">
     <div id="output-mark">Známka</div>
 </form>

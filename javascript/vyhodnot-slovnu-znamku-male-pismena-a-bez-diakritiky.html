@@ -12,17 +12,39 @@
     <p id="odpoved"></p>
 </form>
 
+<!--<script>-->
+<!--    //Riešenie cez funkciu na odstranenie diakritiky a konertovanie na male pismena-->
+<!--    function odstranDiakritiku(text) {-->
+<!--        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");-->
+<!--    }-->
+
+<!--    function vyhodnotSlovnuZnamku() {-->
+<!--        let slovnaZnamkaStudenta = document.getElementById("slovna-znamka").value;-->
+<!--        let slovnaZnamkaStudentaMalymiPismenami = slovnaZnamkaStudenta.toLowerCase();-->
+<!--        let slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky = odstranDiakritiku(slovnaZnamkaStudentaMalymiPismenami);-->
+
+<!--        let znamka;-->
+<!--        if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "vyborny")-->
+<!--            znamka = 1;-->
+<!--        else if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "chvalitebny")-->
+<!--            znamka = 2;-->
+<!--        else if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "dobry")-->
+<!--            znamka = 3;-->
+<!--        else if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "dostatocny")-->
+<!--            znamka = 4;-->
+<!--        else-->
+<!--            znamka = 5;-->
+
+<!--        document.getElementById("odpoved").innerHTML = "Dostal si známku " + znamka;-->
+<!--    }-->
+<!--</script>-->
 <script>
 
-    function odstranDiakritiku(text) {
-        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    }
-
+    // Riešenie cez funkciu na odstranenie diakritiky a konertovanie na male pismena v jednom riadku
     function vyhodnotSlovnuZnamku() {
         let slovnaZnamkaStudenta = document.getElementById("slovna-znamka").value;
-        let slovnaZnamkaStudentaMalymiPismenami = slovnaZnamkaStudenta.toLowerCase();
-        let slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky = odstranDiakritiku(slovnaZnamkaStudentaMalymiPismenami);
-        console.log(slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky);
+        let slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky =
+            slovnaZnamkaStudenta.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
         let znamka;
         if (slovnaZnamkaStudentaMalymiPismenamiBezDiakritiky === "vyborny")
