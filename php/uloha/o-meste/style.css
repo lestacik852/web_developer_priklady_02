@@ -1,0 +1,114 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    max-width: 1200px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin: 10px auto;
+    background: rgb(109,129,252);
+    background: linear-gradient(0deg, rgba(109,129,252,1) 0%, rgba(255,255,255,1) 100%);
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.4s ease-in-out;
+    color: #0000ff;
+    border-bottom: 1px solid transparent;
+}
+a:hover{
+    color: #999;
+    border-bottom: 1px solid #999;
+}
+section{
+    max-width: 700px;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 25px auto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 10px auto;
+}
+input{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+input:focus{
+    outline: none;
+    border-bottom: 1px solid lime;
+}
+textarea{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+textarea:focus{
+    outline: none;
+    border-bottom: 1px solid lime;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.name-second{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.row-radio{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.question{
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    gap: 10px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: clamp(250px,100%,1200px);
+}
+input{
+    margin-block: 15px;
+}
+button{
+    padding: 10px;
+    background-color: ghostwhite;
+    border: none;
+    border-radius: 10px;
+    max-width: 70px;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+button:hover{
+    background-color: #4f4f4f;
+    color: white;
+}
+.form-output{
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+span{
+    color: red;
+}

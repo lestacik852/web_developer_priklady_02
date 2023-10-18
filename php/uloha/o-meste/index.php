@@ -5,7 +5,7 @@ include "menu.php";
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
     if ($id == 1){
-        include "o_meste.php";
+        include "o-meste.php";
     }
     else if ($id == 2){
         include "foto.php";
@@ -13,7 +13,11 @@ if (isset($_GET["id"])) {
     else if ($id == 3) {
         include "mapa.php";
     }
+    else if ($id == 4) {
+        include "contact.php";
+    }
 } else {
     include "o-meste.php";
 }
 include "pata.php";
+?>
