@@ -70,11 +70,6 @@
         pocet++; // Inkrementuje premennu pocet o 1
     }
 
-    //Úloha na hru Fizz Buzz
-    //Fizz buzz je skupinová slovná hra pre deti, ktorej účelom je naučiť ich delenie čísel. Hráči postupne vymenúvajú čísla, pričom nahrádzajú každé číslo deliteľné tromi slovom "fizz" a každé číslo deliteľné piatimi slovom "buzz".
-    //Typická hra fizz buzz môže začínať takto:
-    //1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, …
-
     document.write("<br>Úloha na hru Fizz Buzz<br>")
     let nejakeCislo = 5;
 
@@ -84,6 +79,12 @@
     document.writeln(nejakeCislo / 3);
     document.writeln(nejakeCislo % 3); //Modulo
 
+  
+    //Úloha na hru Fizz Buzz
+    //Fizz buzz je skupinová slovná hra pre deti, ktorej účelom je naučiť ich delenie čísel. Hráči postupne vymenúvajú čísla, pričom nahrádzajú každé číslo deliteľné tromi slovom "fizz" a každé číslo deliteľné piatimi slovom "buzz".
+    //Typická hra fizz buzz môže začínať takto:
+    //1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, …
+
     // document.write("<br>Riešenie</br>")
     // for(let i = 1; i <= 36; i++) {
     //     if (i % 3 == 0) document.writeln("Fizz, ");
@@ -92,6 +93,7 @@
     //     // TODO Ako vypisat pri cislach, ktore su delitelne aj 3-mi, aj 5-timi Fizz Buzz bez ciarky
     // }
 
+    
     document.write("<br>Riešenie</br>")
     for (let i = 1; i <= 36; i++){
         if (i % 3 == 0 && i % 5 ==0) document.writeln("Fizz Buzz, ");

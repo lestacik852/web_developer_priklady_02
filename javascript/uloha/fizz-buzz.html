@@ -3,23 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fizz Buzz</title>
+<style>
+    body{
+        background-color: #ddd;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    input{
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        border-bottom: 2px solid transparent;
+        transition: 0.4s ease-in-out;
+    }
+    input:focus{
+        outline: none;
+        border-bottom: 2px solid lime;
+    }
+    button{
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+    button:hover{
+        background-color: #999;
+        color: white;
+    }
+</style>
 
 </head>
+
 <body>
 <h1>Fizz Buzz</h1>
-<input type="number" id="in" step="1">
+<input type="number" id="in" step="1" placeholder="Tvoje číslo...">
 <button onclick="myFunction()">Odoslať</button>
-<p id="res"></p>
+<h2 id="res"></h2>
 <script>
     function myFunction(){
         inp = document.getElementById("in").value;
         res = document.getElementById("res");
-        if (inp % 5 == 0 && inp % 3 == 0) {
+        if (inp === "") {
+            res.innerHTML = "Vyplň hodnotu";
+        }
+        else if (inp % 5 === 0 && inp % 3 === 0) {
             res.innerHTML = "Fizz Buzz";
-        } else if (inp % 5 == 0) {
+        } else if (inp % 5 === 0) {
             res.innerHTML = "Buzz";
-        } else if (inp % 3 == 0) {
+        } else if (inp % 3 === 0) {
             res.innerHTML = "Fizz";
         } else {
             res.innerHTML = "Skús znova";
